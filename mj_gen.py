@@ -8,7 +8,6 @@
 #
 ###############
 
-
 import gym
 import numpy as np
 from mujoco_py import MjViewer, load_model_from_path, MjSim
@@ -130,7 +129,7 @@ if __name__ == '__main__':
 	FING3 = 73
 
 
-	for i in range(-40,len(bb)):
+	for i in range(-10,len(bb)):
 		if i < 0:
 			ang = [2, 1, 0.1, 0.75, 4.62, 4.48, 4.88, 0.0, 0.0, 0.0]
 		else:
@@ -147,10 +146,10 @@ if __name__ == '__main__':
 			#ang[5] = 1*ang[5]
 			#ang[6] = 1*ang[6]
 
-			ang[0] = 1*ang[0]
+			ang[0] = -1*ang[0]+ math.pi/2
 			ang[1] = math.pi-ang[1]#-1+pi
-			ang[2] = 1*ang[2]
-			ang[3] = 1*ang[3]
+			ang[2] = ang[2]
+			ang[3] = ang[3]
 			ang[4] = ang[4]
 			ang[5] = ang[5]
 			ang[6] = ang[6]
